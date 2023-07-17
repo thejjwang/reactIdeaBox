@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ButtonComponent from "./ButtonComponent";
-// import Display from "../Display";
+import Display from "./Display";
 
 const InputComponent = () => {
     const [ideas, setIdeas] = useState([])
@@ -16,7 +16,6 @@ const InputComponent = () => {
                 });
                 const data = await response.json();
                 setIdeas(data);
-                console.log(data);
             } catch (error) {
                 console.log(error);
             }
@@ -34,8 +33,8 @@ const InputComponent = () => {
                 body: JSON.stringify({ idea: titleInput, description: descriptionInput})
                 });
                 const data = await response.json();
-                setIdeas(data);
-                // console.log(data);
+                setIdeas([...ideas, data]);
+                console.log(data);
                 setTitleInput("");
                 setDescriptionInput("");
                 // console.log(data.description);
@@ -48,6 +47,7 @@ const InputComponent = () => {
             const response = await fetch(`http://localhost:3000/ideas/${id}`, {
               method: 'DELETE',
             });
+            // const data = await response.json();
             setIdeas(ideas.filter((idea) => idea.id !== id));
           } catch (error) {
             console.log(error);
@@ -69,15 +69,7 @@ const InputComponent = () => {
                     <input placeholder="Description" type="text" onChange={handleDescriptionChange} value={descriptionInput}></input>
                     <ButtonComponent handleAddInputs={handleAddInputs}/>
                 </div>
-                <div className="list-container">
-                    {ideas.map((idea) => (
-                        <li className="card" key={idea.id}>
-                            <h2>{idea.idea}</h2>
-                            <p>{idea.description}</p>
-                            <button className="deleteBtn" onClick={() => handleDeleteInputs(idea.id)}></button>
-                        </li>
-                    ))}
-                </div>
+                <Display handleDeleteInputs={handleDeleteInputs} ideas={ideas}/>
             </div>  
         </>
     )
