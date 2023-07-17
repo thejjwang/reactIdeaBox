@@ -54,19 +54,12 @@ const InputComponent = () => {
           }
     };
 
-    const handleTitleChange = (e) => {
-        setTitleInput(e.target.value);
-    }
-    const handleDescriptionChange = (e) => {
-        setDescriptionInput(e.target.value);
-    }
-
     return (
         <>
             <div className="app-container">
                 <div className="input-container">
-                    <input placeholder="Title" type="text" onChange={handleTitleChange} value={titleInput}></input>
-                    <input placeholder="Description" type="text" onChange={handleDescriptionChange} value={descriptionInput}></input>
+                    <input placeholder="Title" type="text" onChange={(e) => {setTitleInput(e.target.value)}} value={titleInput}></input>
+                    <input placeholder="Description" type="text" onChange={(e) => {setDescriptionInput(e.target.value)}} value={descriptionInput}></input>
                     <ButtonComponent handleAddInputs={handleAddInputs}/>
                 </div>
                 <Display handleDeleteInputs={handleDeleteInputs} ideas={ideas}/>
