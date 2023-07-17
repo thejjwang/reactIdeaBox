@@ -1,0 +1,24 @@
+{
+  "ideas": [
+    {
+      "idea": "Puppy Cafe",
+      "description": "A place to drink coffee with pups.",
+      "id": 1
+    },
+    {
+      "idea": "Gym",
+      "description": "A place to exercise and workout.",
+      "id": 2
+    },
+    {
+      "idea": "Party",
+      "description": "A place to let loose and have fun.",
+      "id": 3
+    },
+    {
+      "idea": "awfsdfdf",
+      "description": " dfasdf",
+      "id": 4
+    }
+  ]
+}

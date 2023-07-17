@@ -1,6 +1,6 @@
 
-const ButtonComponent = () => {
-    return <button type="button">Submit</button>
+const ButtonComponent = ({handleAddInputs}) => {
+    return <button type="button" onClick={handleAddInputs}>Submit</button>
 
 }
 
