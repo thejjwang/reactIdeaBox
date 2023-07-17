@@ -69,15 +69,15 @@ const InputComponent = () => {
                     <input placeholder="Description" type="text" onChange={handleDescriptionChange} value={descriptionInput}></input>
                     <ButtonComponent handleAddInputs={handleAddInputs}/>
                 </div>
-                <ul className="list-container">
+                <div className="list-container">
                     {ideas.map((idea) => (
                         <li className="card" key={idea.id}>
                             <h2>{idea.idea}</h2>
                             <p>{idea.description}</p>
-                            <button onClick={() => handleDeleteInputs(idea.id)}>Delete</button>
+                            <button className="deleteBtn" onClick={() => handleDeleteInputs(idea.id)}></button>
                         </li>
                     ))}
-                </ul>
+                </div>
             </div>  
         </>
     )

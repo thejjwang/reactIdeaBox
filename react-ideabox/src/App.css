@@ -7,5 +7,46 @@
 
 .input-container {
     display: flex;
-    align-items: center;
-  }
+    justify-content: space-around;
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between;
+    border: 3px solid;
+    padding: 10px;
+    margin: 10px;
+}
+
+.submitBtn {
+    width: 250px;
+    border: 3px solid;
+}
+
+.deleteBtn {
+    height: 30px;
+    width: 80px;
+    background: url("https://t4.ftcdn.net/jpg/03/01/07/99/360_F_301079914_TDcwbIag3uOp7dwNRWb0bqpfWeOzb6Xu.jpg");
+    background-size: 70%;
+    background-position: center; 
+}
+
+input {
+    width: 250px;
+    border: 3px solid;
+}
+
+h2 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+p {
+    margin-top: 10px;
+}
