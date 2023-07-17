@@ -61,8 +61,9 @@ const InputComponent = () => {
                 </div>
                 <ul className="list-container">
                     {ideas.map((idea) => (
-                        <li className="li-item" key={idea.id}>
-                            {idea.idea}
+                        <li className="card" key={idea.id}>
+                            <h2>{idea.idea}</h2>
+                            <p>{idea.description}</p>
                         </li>
                     ))}
                 </ul>

@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+  }

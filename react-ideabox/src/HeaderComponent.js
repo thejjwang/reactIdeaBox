@@ -1,6 +1,6 @@
 
 const HeaderComponent = () => {
-    return <h1>IdeaBox</h1>
+    return <h1 className="header">IdeaBox</h1>
 }
 
 export default HeaderComponent;
