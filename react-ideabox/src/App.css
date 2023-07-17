@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Helvetica Neue', sans-serif;
 }
 
 .input-container {
@@ -11,7 +10,8 @@
 }
 
 .list-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
 }
 
