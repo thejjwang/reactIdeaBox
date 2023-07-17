@@ -43,6 +43,16 @@ const InputComponent = () => {
                 console.log(error);
         }
     }
+    const handleDeleteInputs = async (id) => {
+        try {
+            const response = await fetch(`http://localhost:3000/ideas/${id}`, {
+              method: 'DELETE',
+            });
+            setIdeas(ideas.filter((idea) => idea.id !== id));
+          } catch (error) {
+            console.log(error);
+          }
+    };
 
     const handleTitleChange = (e) => {
         setTitleInput(e.target.value);
@@ -64,6 +74,7 @@ const InputComponent = () => {
                         <li className="card" key={idea.id}>
                             <h2>{idea.idea}</h2>
                             <p>{idea.description}</p>
+                            <button onClick={() => handleDeleteInputs(idea.id)}>Delete</button>
                         </li>
                     ))}
                 </ul>
